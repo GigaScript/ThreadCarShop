@@ -7,8 +7,16 @@ public class CarShop {
 
     public static void main(String[] args) throws InterruptedException {
         for (int i = 0; i < totalConsumerThreads; i++) {
-            new Thread(null, new CarBuyer(carWarehouse), i + "").start();
+            new Thread(
+                    null,
+                    new CarBuyer(carWarehouse),
+                    i + "")
+                    .start();
         }
-        new Thread(null, new CarSupplier(carWarehouse), "Toyota Motor SPB").start();
+        new Thread(
+                null,
+                new CarSupplier(carWarehouse),
+                "Toyota Motor SPB")
+                .start();
     }
 }

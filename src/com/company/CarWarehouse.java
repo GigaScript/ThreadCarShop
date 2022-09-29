@@ -27,6 +27,7 @@ public class CarWarehouse {
     public boolean isFull() {
         return carsInStock() == maximumCarsInStock;
     }
+
     public boolean isPossibleSell() {
         return totalCarSells() < maximumCarSell;
     }
